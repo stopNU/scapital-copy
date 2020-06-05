@@ -1,0 +1,17 @@
+.faq .ant-btn > .anticon{
+    position: relative;
+    top: -1px;
+}
+.faq{
+    .ant-btn-icon-only.ant-btn-lg, .ant-btn-circle.ant-btn-lg, .ant-btn-circle-outline.ant-btn-lg{
+        min-width: 34px;
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media screen and (max-width: $media-tablet) {
+    .ant-layout-header{
+        line-height: 1;
+    }
+}

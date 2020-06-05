@@ -1,0 +1,266 @@
+@import './_variables.scss';
+@import './ant-design.scss';
+
+body{
+    background-color: #F3F3F3;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+h1 {
+    font-family: $font-headlines;
+    font-size: 65px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 79px;
+    color: $text-color-dark;
+    @media screen and (max-width: $media-mobile) {
+        font-size: 30px;
+        line-height: 27px;
+    }
+}
+h2{
+    font-family: $font-headlines;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: $text-color-dark;
+    line-height: 55px;
+    @media screen and (max-width: $media-mobile) {
+        font-size: 25px;
+        line-height: 37.5px;
+        margin-bottom: 20px;
+    }
+}
+h3{
+    font-family: $font-headlines;
+    font-size: 35px;
+    font-weight: 600; /*semi-bold*/
+    margin-bottom: 30px;
+    color: $text-color-dark;
+    line-height: 43px;
+    &.text-light{
+        color: $text-color-light;
+    }
+    &.text-brand{
+        color: $brand-color;
+    }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+h5{
+    font-family: $font-headlines;
+    font-size: 21px;
+    font-weight: 700; /*bold*/
+    margin-bottom: 30px;
+    color: $text-color-dark;
+    line-height: 25px;
+    text-transform: uppercase;
+    &.text-light{
+        color: $text-color-light;
+    }
+    &.text-brand{
+        color: $brand-color;
+    }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+h6{
+    font-family: $font-paragraphs;
+    font-size: 21px;
+    font-weight: 400; /*bold*/
+    color: $text-color-dark;
+    line-height: 28px;
+    &.text-light{
+        color: $text-color-light;
+    }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+p{
+    font-family: $font-paragraphs;
+    font-size: 17px;
+    color: $text-color-dark;
+    font-weight: 400;
+    line-height: 25.5px;
+    &.text-light{
+        color: $text-color-light;
+    }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+.background-text{
+    font-family: $font-headlines;
+    font-size: 250px;
+    font-weight: 700;
+    text-shadow: 0px 3px 20px #00000029;
+    color: $brand-color;
+    text-transform: uppercase;
+    opacity: 0.1;
+    line-height: 190px;
+    white-space: nowrap;
+    @media screen and (max-width: $media-desktop) {
+        font-size: 180px;
+    }
+    @media screen and (max-width: $media-tablet) {
+        font-size: 120px;
+    }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 100px;
+        line-height: 122px;
+    }
+}
+
+.btn{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-family: $font-headlines;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0;
+    height: 45px;
+    @media screen and (max-width: $media-mobile) {
+        font-size: 10px;
+    }
+    a{
+        color: #FFFFFF;
+        font-weight: 700;
+        padding: 20px 75px;
+        background: rgb(0,229,158);
+        background: $main-btn-color;
+        border: 0;
+        border-top-left-radius: $border-radius-style;
+        border-bottom-right-radius: $border-radius-style;
+        &:hover{
+            background: $main-btn-color-hover;
+        }
+        @media screen and (max-width: $media-mobile) {
+            padding: 15px 50px;
+        }
+    }
+    &.btn-transparent a{
+        background: transparent;
+        background-image: url('~@/assets/icons/button_01.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 24px 57px;
+        color: $brand-color;
+        &:hover{
+            color: $main-btn-color-hover;
+            background-image: url('~@/assets/icons/button_01_hover.svg');
+        }
+        @media screen and (max-width: $media-mobile) {
+            padding: 15px 42px;
+        }
+    }
+}
+
+.text-light{
+    color: $text-color-light;
+}
+
+main > section.ant-layout, .site-wrapper{
+    max-width: $outer-wrapper-size;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.ant-layout-content, .ant-layout-footer, .ant-layout-header{
+    &.wrapper, .footer, .menu-wrapper, .ant-layout-header{
+        max-width: $inner-wrapper-size;
+        width: 100%;
+        margin: 0 auto;
+        @media screen and (max-width: $inner-wrapper-size) {
+            padding: 0 $side-padding-tablet;
+        }
+        @media screen and (max-width: $media-mobile) {
+            padding: 0 $side-padding-mobile;
+        }
+    }
+}
+
+.hide-mobile{
+    @media screen and (max-width: $media-mobile) {
+        display:none !important;
+    }
+}
+.show-mobile{
+    @media screen and (min-width: $media-mobile) {
+        display:none !important;
+    }
+}
+.hide-tablet{
+    @media screen and (max-width: $media-tablet) {
+        display:none;
+    }
+}
+.show-tablet{
+    @media screen and (min-width: $media-tablet) {
+        display:none !important;
+    }
+}
+
+.separator{
+    height: 6px;
+    width: 90px;
+    background: $main-gradient;
+    &.white{
+        background: #FFFFFF;
+        width: 220px;
+    }
+}
+
+.fullscreen-bg{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    //-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: 500px;
+    background-color: #FFFFFF; /* Just for now*/
+    @media screen and (max-width: $media-desktop) {
+        background-attachment: initial;
+    }
+    @media screen and (max-width: $media-tablet) {
+        height: 100%;
+    }
+}
+
+.top-curv-bar{
+    background-color: #F3F3F3;
+    width: $inner-wrapper-size;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    border-top-left-radius: $border-radius-style;
+    border-top-right-radius: $border-radius-style;
+    position: absolute;
+    top: -60px;
+    box-shadow: 0 -5px 9px -3px #00000029;
+    @media screen and (max-width: $inner-wrapper-size) {
+        width: 80%;
+    }
+}
+
+#about-me .text-wrapper p{
+    max-width: none;
+}

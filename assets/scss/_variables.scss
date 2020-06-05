@@ -1,0 +1,33 @@
+$media-xsmall: 500px; /* max widths */
+$media-mobile: 767px; /* max widths */
+$media-tablet: 992px; /* max widths */
+$media-tablet-xl: 1200px; /* max widths */
+$media-desktop: 1440px; /* max widths */
+$media-desktop-xl: 1680px;
+
+$menu-height: 110px;
+$menu-height-tablet: 80px;
+$menu-height-mobile: 60px;
+
+$outer-wrapper-size: 1920px;
+$inner-wrapper-size: 1440px;
+
+$side-padding-tablet: 30px;
+$side-padding-mobile: $side-padding-tablet/2;
+
+/*$font-headlines: 'Agane', serif;*/
+$font-headlines: 'Montserrat', serif;
+$font-paragraphs: 'Open Sans', sans-serif;
+
+/* Colors */
+$main-bg-color: #F8F8F8;
+$brand-color: #0A71FF;
+$main-gradient: linear-gradient(276deg, rgba(0,229,158,1) 0%, rgba(10,113,255,1) 100%);
+
+$main-btn-color: $main-gradient;
+$main-btn-color-hover: #282828;
+
+$text-color-dark: #282828;
+$text-color-light: #FFFFFF;
+
+$border-radius-style: 60px;
