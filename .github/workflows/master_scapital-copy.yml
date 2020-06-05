@@ -20,15 +20,16 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: yarn install and build
+    - name: npm install, build, and test
       run: |
-        yarn install
-        yarn build
+        npm install
+        npm run build --if-present
+        npm run test --if-present
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'nuxt-npm-test'
+        app-name: 'scapital-copy'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1b565e13aafc413e9961abab2736fea9 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_98740d87bb84477395771ad228b4b878 }}
         package: .
