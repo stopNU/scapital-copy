@@ -28,7 +28,7 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'scapital-copy'
+        app-name: 'nuxt-npm-test'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6f2dff97293d423fbe013beef4aa7ba1 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1b565e13aafc413e9961abab2736fea9 }}
         package: .
